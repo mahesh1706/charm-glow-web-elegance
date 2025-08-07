@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import { Menu, X, Sparkles } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import logoImage from '@/assets/charm-bridals-logo.png';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,14 +30,14 @@ const Navigation = () => {
             className="flex items-center space-x-2 cursor-pointer group"
             onClick={() => scrollToSection('hero')}
           >
-            <div className="flex items-center justify-center w-10 h-10 glass rounded-full group-hover:glow-hover transition-all duration-300">
-              <Sparkles className="w-5 h-5 text-jewel-blue" />
+            <div className="flex items-center justify-center w-12 h-12 glass rounded-full group-hover:glow-hover transition-all duration-300 overflow-hidden">
+              <img src={logoImage} alt="Charm Bridals Logo" className="w-10 h-10 object-contain" />
             </div>
             <div className="flex flex-col">
-              <h1 className="text-xl font-playfair font-semibold text-foreground leading-none">
+              <h1 className="text-xl font-playfair font-semibold text-soft-brown leading-none">
                 Charm Bridals
               </h1>
-              <p className="text-xs text-muted-foreground font-inter">
+              <p className="text-xs text-soft-brown/70 font-inter">
                 Beauty & Elegance
               </p>
             </div>
@@ -48,7 +49,7 @@ const Navigation = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.id)}
-                className="text-foreground hover:text-jewel-blue transition-colors duration-300 font-inter font-medium relative group"
+                className="text-soft-brown hover:text-jewel-blue transition-colors duration-300 font-inter font-medium relative group"
               >
                 {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-jewel-blue transition-all duration-300 group-hover:w-full"></span>
@@ -72,7 +73,7 @@ const Navigation = () => {
               variant="ghost"
               size="sm"
               onClick={() => setIsOpen(!isOpen)}
-              className="text-foreground hover:text-jewel-blue"
+              className="text-soft-brown hover:text-jewel-blue"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </Button>
@@ -87,7 +88,7 @@ const Navigation = () => {
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.id)}
-                  className="block w-full text-left text-foreground hover:text-jewel-blue transition-colors duration-300 font-inter font-medium py-2"
+                  className="block w-full text-left text-soft-brown hover:text-jewel-blue transition-colors duration-300 font-inter font-medium py-2"
                 >
                   {item.name}
                 </button>
