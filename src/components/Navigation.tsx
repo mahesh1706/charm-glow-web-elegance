@@ -30,8 +30,8 @@ const Navigation = () => {
             className="flex items-center space-x-2 cursor-pointer group"
             onClick={() => scrollToSection('hero')}
           >
-            <div className="flex items-center justify-center w-12 h-12 glass rounded-full group-hover:glow-hover transition-all duration-300 overflow-hidden">
-              <img src={logoImage} alt="Charm Bridals Logo" className="w-10 h-10 object-contain" />
+            <div className="flex items-center justify-center w-14 h-14 glass rounded-full group-hover:glow-hover transition-all duration-300 overflow-hidden p-1">
+              <img src={logoImage} alt="Charm Bridals Logo" className="w-full h-full object-contain" />
             </div>
             <div className="flex flex-col">
               <h1 className="text-xl font-playfair font-semibold text-soft-brown leading-none">
