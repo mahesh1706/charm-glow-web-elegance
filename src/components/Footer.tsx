@@ -27,7 +27,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="relative bg-gradient-to-b from-champagne to-soft-brown text-white overflow-hidden">
+    <footer id="footer" className="relative bg-gradient-to-b from-champagne to-soft-brown text-white overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-soft-brown via-champagne to-jewel-blue opacity-90"></div>
       

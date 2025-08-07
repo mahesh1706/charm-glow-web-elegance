@@ -26,7 +26,7 @@ const GallerySection = () => {
     : galleryItems.filter(item => item.category === activeFilter);
 
   return (
-    <section className="py-20 relative">
+    <section id="gallery" className="py-20 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-ivory to-champagne opacity-40"></div>
       
       <div className="relative z-10 container mx-auto px-6">

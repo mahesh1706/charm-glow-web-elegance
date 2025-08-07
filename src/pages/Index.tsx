@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
 import BookingSection from '@/components/BookingSection';
 import PackagesSection from '@/components/PackagesSection';
@@ -23,6 +24,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-luxury-gradient">
+      <Navigation />
       <HeroSection />
       <BookingSection />
       <PackagesSection />

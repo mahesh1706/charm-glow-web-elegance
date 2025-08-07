@@ -60,7 +60,7 @@ const ReviewsSection = () => {
   };
 
   return (
-    <section className="py-20 relative overflow-hidden">
+    <section id="reviews" className="py-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-champagne to-ivory opacity-50"></div>
       
       {/* Floating Elements */}

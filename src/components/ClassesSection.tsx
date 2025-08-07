@@ -53,7 +53,7 @@ const ClassesSection = () => {
   ];
 
   return (
-    <section className="py-20 relative">
+    <section id="classes" className="py-20 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-ivory to-champagne opacity-60"></div>
       
       <div className="relative z-10 container mx-auto px-6">

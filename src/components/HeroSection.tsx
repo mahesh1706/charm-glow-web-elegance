@@ -9,7 +9,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Background Layers */}
       <div className="absolute inset-0 luxury-gradient"></div>
       
@@ -28,12 +28,12 @@ const HeroSection = () => {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto" data-aos="fade-up" data-aos-duration="1200">
-        <div className="glass-strong rounded-3xl p-12 backdrop-blur-2xl">
-          <h1 className="text-6xl md:text-8xl font-playfair font-light mb-6 text-gradient">
+      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto" data-aos="fade-up" data-aos-duration="1200">
+        <div className="glass-strong rounded-3xl p-8 md:p-16 backdrop-blur-3xl border border-white/30 shadow-2xl">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-playfair font-light mb-8 text-gradient leading-tight">
             Charm Bridals
           </h1>
-          <p className="text-xl md:text-2xl text-soft-brown font-light tracking-wide mb-8 font-inter">
+          <p className="text-lg md:text-xl lg:text-2xl text-foreground/90 font-light tracking-wide mb-10 font-inter max-w-3xl mx-auto leading-relaxed">
             Redefining Bridal Beauty with Elegance & Glow
           </p>
           
@@ -46,9 +46,9 @@ const HeroSection = () => {
 
           <Button 
             onClick={scrollToBooking}
-            className="glass-strong border-2 border-jewel-blue/30 text-jewel-blue hover:bg-jewel-blue hover:text-white px-8 py-4 text-lg font-inter glow-hover transition-all duration-300 backdrop-blur-xl rounded-full"
+            className="glass-strong border-2 border-jewel-blue/40 text-jewel-blue hover:bg-jewel-blue hover:text-white px-10 py-5 text-lg md:text-xl font-inter glow-hover transition-all duration-300 backdrop-blur-xl rounded-full shadow-lg hover:shadow-2xl"
           >
-            Book Now
+            Book Your Session
           </Button>
         </div>
       </div>

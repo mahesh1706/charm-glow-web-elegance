@@ -60,7 +60,7 @@ const PackagesSection = () => {
   };
 
   return (
-    <section className="py-20 relative">
+    <section id="packages" className="py-20 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-champagne to-ivory opacity-60"></div>
       
       <div className="relative z-10 container mx-auto px-6">
