@@ -10,16 +10,25 @@ const GallerySection = () => {
 
   // Placeholder images - in a real app, these would be actual image URLs
   const galleryItems = [
-    { id: 1, category: 'Bridal', title: 'Classic Bridal Look', image: 'https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=400&h=600&fit=crop' },
-    { id: 2, category: 'Celebrity', title: 'Red Carpet Glam', image: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400&h=600&fit=crop' },
-    { id: 3, category: 'Engagement', title: 'Soft Romantic Look', image: 'https://images.unsplash.com/photo-1606814893907-c2e42943c91f?w=400&h=600&fit=crop' },
-    { id: 4, category: 'Traditional', title: 'Traditional South Indian', image: 'https://images.unsplash.com/photo-1583391733956-3c32315d30d5?w=400&h=600&fit=crop' },
-    { id: 5, category: 'Bridal', title: 'Modern Bridal Style', image: 'https://images.unsplash.com/photo-1609220136736-443140cffec6?w=400&h=600&fit=crop' },
-    { id: 6, category: 'Celebrity', title: 'Fashion Week Inspired', image: 'https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?w=400&h=600&fit=crop' },
-    { id: 7, category: 'Engagement', title: 'Dreamy Engagement Look', image: 'https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=400&h=600&fit=crop' },
-    { id: 8, category: 'Traditional', title: 'Royal Traditional', image: 'https://images.unsplash.com/photo-1583391733956-3c32315d30d5?w=400&h=600&fit=crop' },
-    { id: 9, category: 'Bridal', title: 'Vintage Bridal', image: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400&h=600&fit=crop' }
+    { id: 1, category: '', title: '', image: 'https://i.postimg.cc/d179R3fz/Screenshot-2025-08-07-222411.png' },
+    { id: 2, category: '', title: '', image: 'https://i.postimg.cc/0jYDZw0H/Screenshot-2025-08-07-223316.png' },
+    { id: 3, category: '', title: '', image: 'https://i.postimg.cc/m2S7H7DP/Screenshot-2025-08-07-222754.png' },
+    { id: 4, category: '', title: '', image: 'https://i.postimg.cc/Jz4ZctDP/Screenshot-2025-08-07-222843.png' },
+    { id: 5, category: '', title: '', image: 'https://i.postimg.cc/vHGVbDzb/Screenshot-2025-08-07-222950.png' },
+    { id: 6, category: '', title: '', image: 'https://i.postimg.cc/Kzn1yy31/Screenshot-2025-08-07-222901.png' },
+    { id: 7, category: '', title: '', image: 'https://i.postimg.cc/xd8GYq9c/Screenshot-2025-08-07-222439.png' },
+    { id: 8, category: '', title: '', image: 'https://i.postimg.cc/5NkNTtKP/Screenshot-2025-08-07-223237.png' },
+    { id: 9, category: '', title: '', image: 'https://i.postimg.cc/QdTszJTt/Screenshot-2025-08-07-222917.png' }
   ];
+  //Bridal,Classic Bridal Look
+  // Celebrity,Red Carpet Glam
+  // Engagement,Soft Romantic Look'
+  // Traditional,Traditional South Indian
+  // Bridal,Modern Bridal Style
+  //Celebrity,Fashion Week Inspired
+  // Engagement,Dreamy Engagement Look
+  // Traditional,Royal Traditional
+  // Bridal,Vintage Bridal
 
   const filteredItems = activeFilter === 'All' 
     ? galleryItems 

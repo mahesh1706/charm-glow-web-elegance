@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import logoImage from '@/assets/charm-bridals-logo.png';
+import logoImage from '@/assets/newlogo.jpg';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);

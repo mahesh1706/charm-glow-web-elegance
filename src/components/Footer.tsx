@@ -4,8 +4,8 @@ import { Button } from '@/components/ui/button';
 
 const Footer = () => {
   const socialLinks = [
-    { icon: <Instagram className="w-6 h-6" />, href: "https://instagram.com/divyaprakash__mua", label: "Instagram" },
-    { icon: <MessageCircle className="w-6 h-6" />, href: "https://wa.me/+919876543210", label: "WhatsApp" },
+    { icon: <Instagram className="w-6 h-6" />, href: "https://www.instagram.com/divyaprakash_mua/?igsh=MWVmNWt4YWJocGlyeg%3D%3D#", label: "Instagram" },
+    { icon: <MessageCircle className="w-6 h-6" />, href: "https://wa.me/+919894234282", label: "WhatsApp" },
     { icon: <Mail className="w-6 h-6" />, href: "mailto:info@charmbridals.com", label: "Email" },
   ];
 
@@ -50,7 +50,7 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-jewel-blue" />
-                <span className="text-ivory/90 font-inter">+91 98765 43210</span>
+                <span className="text-ivory/90 font-inter">+91 98942 34282</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-jewel-blue" />
@@ -120,7 +120,7 @@ const Footer = () => {
 
             {/* CTA Button */}
             <Button 
-              onClick={() => window.open('https://wa.me/+919876543210', '_blank')}
+              onClick={() => window.open('https://wa.me/+919894234282', '_blank')}
               className="w-full bg-jewel-blue hover:bg-jewel-blue/90 text-white py-3 rounded-full glow-hover transition-all duration-300 font-inter"
             >
               Book Your Transformation
