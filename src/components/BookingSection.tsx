@@ -39,7 +39,7 @@ const BookingSection = () => {
 
   const handleWhatsAppBooking = () => {
     const message = `Hi! I'd like to book Charm Bridals services.\n\nName: ${formData.name}\nPhone: ${formData.phone}\nServices: ${formData.services.join(', ')}\nPreferred Date: ${formData.preferredDate}\nVenue: ${formData.venue}\nStudio Time: ${formData.studioTime}\n\nMessage: ${formData.message}`;
-    const whatsappUrl = `https://wa.me/+919876543210?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/+919894234282?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 
