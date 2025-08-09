@@ -1,12 +1,9 @@
 
-import { useState } from 'react';
-import { Filter, Eye } from 'lucide-react';
+import { Eye } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const GallerySection = () => {
-  const [activeFilter, setActiveFilter] = useState('All');
-
-  const filters = ['All', 'Bridal', 'Engagement', 'Celebrity', 'Traditional'];
+  // Filters removed; showing all items
 
   // Placeholder images - in a real app, these would be actual image URLs
   const galleryItems = [
@@ -30,9 +27,7 @@ const GallerySection = () => {
   // Traditional,Royal Traditional
   // Bridal,Vintage Bridal
 
-  const filteredItems = activeFilter === 'All' 
-    ? galleryItems 
-    : galleryItems.filter(item => item.category === activeFilter);
+  const filteredItems = galleryItems;
 
   return (
     <section id="gallery" className="py-20 relative">
@@ -46,24 +41,6 @@ const GallerySection = () => {
           </p>
         </div>
 
-        {/* Filter Buttons */}
-        <div className="flex justify-center mb-12" data-aos="fade-up" data-aos-delay="200">
-          <div className="glass-strong rounded-full p-2 flex flex-wrap gap-2">
-            {filters.map((filter) => (
-              <Button
-                key={filter}
-                onClick={() => setActiveFilter(filter)}
-                className={`rounded-full px-6 py-2 transition-all duration-300 ${
-                  activeFilter === filter
-                    ? 'bg-jewel-blue text-white shadow-lg'
-                    : 'glass text-soft-brown hover:bg-jewel-blue/10 hover:text-jewel-blue'
-                }`}
-              >
-                {filter}
-              </Button>
-            ))}
-          </div>
-        </div>
 
         {/* Gallery Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
