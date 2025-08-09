@@ -83,7 +83,7 @@ const GallerySection = () => {
               </div>
               
               {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-6">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-6">
                 <div>
                   <h3 className="text-white font-playfair text-xl mb-1">{item.title}</h3>
                   <p className="text-champagne text-sm">{item.category}</p>
