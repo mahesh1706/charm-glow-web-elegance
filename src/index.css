@@ -9,7 +9,7 @@
 @layer base {
   :root {
     --background: 43 36% 96%;
-    --foreground: 25 25% 15%;
+    --foreground: 0 0% 0%;
 
     --card: 43 36% 98%;
     --card-foreground: 25 25% 15%;
@@ -17,7 +17,7 @@
     --popover: 43 36% 98%;
     --popover-foreground: 25 25% 15%;
 
-    --primary: 210 80% 45%;
+    --primary: 24 30% 50%;
     --primary-foreground: 43 36% 98%;
 
     --secondary: 35 25% 85%;
@@ -34,15 +34,15 @@
 
     --border: 35 20% 88%;
     --input: 35 20% 88%;
-    --ring: 210 80% 45%;
+    --ring: 24 30% 50%;
 
     --radius: 1rem;
 
     /* Custom Luxury Colors */
     --champagne: 43 36% 85%;
-    --soft-brown: 25 25% 65%;
+    --soft-brown: 0 0% 0%;
     --ivory: 43 36% 96%;
-    --jewel-blue: 25 45% 45%;
+    --jewel-blue: 24 30% 62%;
     --glass-bg: 43 36% 98%;
     
     --sidebar-background: 0 0% 98%;
@@ -62,7 +62,7 @@
     --card-foreground: 43 36% 95%;
     --popover: 25 25% 10%;
     --popover-foreground: 43 36% 95%;
-    --primary: 210 80% 55%;
+    --primary: 24 35% 65%;
     --primary-foreground: 25 25% 8%;
     --secondary: 25 15% 15%;
     --secondary-foreground: 43 36% 95%;
@@ -72,11 +72,11 @@
     --accent-foreground: 43 36% 95%;
     --border: 25 15% 18%;
     --input: 25 15% 18%;
-    --ring: 210 80% 55%;
+    --ring: 24 35% 65%;
     --champagne: 43 20% 25%;
     --soft-brown: 25 15% 35%;
     --ivory: 25 25% 12%;
-    --jewel-blue: 25 45% 55%;
+    --jewel-blue: 24 35% 70%;
     --glass-bg: 25 25% 12%;
   }
 }
@@ -124,7 +124,7 @@
   }
 
   .glow-hover:hover {
-    box-shadow: 0 0 30px rgba(70, 130, 180, 0.4);
+    box-shadow: 0 0 30px hsl(var(--jewel-blue) / 0.4);
     transform: translateY(-2px);
   }
 
@@ -155,8 +155,8 @@
   }
 
   @keyframes glow {
-    0%, 100% { box-shadow: 0 0 20px rgba(70, 130, 180, 0.2); }
-    50% { box-shadow: 0 0 40px rgba(70, 130, 180, 0.4); }
+    0%, 100% { box-shadow: 0 0 20px hsl(var(--jewel-blue) / 0.2); }
+    50% { box-shadow: 0 0 40px hsl(var(--jewel-blue) / 0.4); }
   }
 
   @keyframes shimmer {
