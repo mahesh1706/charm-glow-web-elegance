@@ -182,4 +182,37 @@
     background-size: 200% 100%;
     animation: shimmer 2s infinite;
   }
+
+  /* Hero Image Loading States */
+  .hero-img.is-loading {
+    opacity: 0;
+    transform: translateY(8px) scale(0.995);
+  }
+
+  .hero-img.is-loaded {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  /* Reduced Motion Support */
+  @media (prefers-reduced-motion: reduce) {
+    .hero-img, 
+    .hero-card, 
+    .hero-cta [data-aos] {
+      transition: opacity 0.35s ease !important;
+      transform: none !important;
+      animation: none !important;
+    }
+    
+    .float-animation,
+    .glow-animation {
+      animation: none !important;
+    }
+  }
+
+  /* Custom hero ease */
+  :root {
+    --hero-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
 }
