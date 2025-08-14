@@ -4,8 +4,6 @@ import { Button } from '@/components/ui/button';
 import { useEffect, useState } from 'react';
 
 const HeroSection = () => {
-  const [imagesLoaded, setImagesLoaded] = useState(false);
-
   const scrollToBooking = () => {
     const bookingSection = document.getElementById('booking');
     bookingSection?.scrollIntoView({ behavior: 'smooth' });
@@ -23,21 +21,22 @@ const HeroSection = () => {
     link.href = '/images/hero/bridal-1.webp';
     document.head.appendChild(link);
 
-    // Check if images are loaded
-    const checkImagesLoaded = () => {
-      const images = document.querySelectorAll('.hero-img img') as NodeListOf<HTMLImageElement>;
-      let loadedCount = 0;
-      
-      images.forEach((img) => {
-        if (img.complete) loadedCount++;
+    // Initialize image load animations
+    const initImageAnimations = () => {
+      document.querySelectorAll('.hero-img img').forEach((img: HTMLImageElement) => {
+        const wrap = img.closest('.hero-img');
+        if (wrap) wrap.classList.add('is-loading');
+        if (img.complete) {
+          wrap && wrap.classList.replace('is-loading', 'is-loaded');
+        } else {
+          img.addEventListener('load', () => {
+            wrap && wrap.classList.replace('is-loading', 'is-loaded');
+          }, { once: true });
+        }
       });
-      
-      if (loadedCount === images.length) {
-        setImagesLoaded(true);
-      }
     };
 
-    const timer = setTimeout(checkImagesLoaded, 100);
+    const timer = setTimeout(initImageAnimations, 100);
     return () => clearTimeout(timer);
   }, []);
 
@@ -48,96 +47,88 @@ const HeroSection = () => {
       
       {/* Hero Image Cluster */}
       <div className="absolute inset-0 z-0">
-        {/* Top Left */}
+        {/* Top Left - Hidden on mobile */}
         <div 
-          className="hero-img absolute top-20 left-8 md:left-16 w-24 h-32 md:w-32 md:h-40 rounded-xl shadow-lg border border-white/20 overflow-hidden is-loading"
+          className="hero-img hidden sm:block absolute top-16 left-8 md:left-12 lg:left-16 overflow-hidden is-loading hero-img--desktop-only"
           data-aos="fade-right" 
-          data-aos-delay="320"
+          data-aos-delay="340"
           style={{
-            backgroundImage: 'url(/images/hero/bridal-1.webp)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center'
+            width: 'clamp(96px, 32vw, 140px)',
+            aspectRatio: '3/4'
           }}
         >
           <img 
             src="/images/hero/bridal-1.webp" 
             alt="Bridal look — classic elegance"
-            className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+            className="w-full h-full object-cover"
+            width="140"
+            height="187"
             loading="eager"
             fetchPriority="high"
-            onLoad={(e) => {
-              e.currentTarget.parentElement?.classList.remove('is-loading');
-              e.currentTarget.parentElement?.classList.add('is-loaded');
-            }}
+            decoding="async"
           />
         </div>
 
         {/* Top Right */}
         <div 
-          className="hero-img absolute top-32 right-8 md:right-20 w-28 h-36 md:w-36 md:h-44 rounded-xl shadow-lg border border-white/20 overflow-hidden is-loading"
+          className="hero-img absolute top-20 right-8 sm:right-12 md:right-16 lg:right-20 overflow-hidden is-loading"
           data-aos="fade-left" 
-          data-aos-delay="400"
+          data-aos-delay="420"
           style={{
-            backgroundImage: 'url(/images/hero/bridal-2.webp)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center'
+            width: 'clamp(96px, 32vw, 200px)',
+            aspectRatio: '3/4'
           }}
         >
           <img 
             src="/images/hero/bridal-2.webp" 
             alt="Bridal look — dewy glow"
-            className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+            className="w-full h-full object-cover"
+            width="200"
+            height="267"
             loading="lazy"
-            onLoad={(e) => {
-              e.currentTarget.parentElement?.classList.remove('is-loading');
-              e.currentTarget.parentElement?.classList.add('is-loaded');
-            }}
+            decoding="async"
           />
         </div>
 
         {/* Bottom Left */}
         <div 
-          className="hero-img absolute bottom-32 left-4 md:left-12 w-26 h-34 md:w-30 md:h-38 rounded-xl shadow-lg border border-white/20 overflow-hidden is-loading"
+          className="hero-img absolute bottom-24 left-6 sm:left-8 md:left-12 lg:left-16 overflow-hidden is-loading"
           data-aos="fade-right" 
-          data-aos-delay="480"
+          data-aos-delay="500"
           style={{
-            backgroundImage: 'url(/images/hero/bridal-3.webp)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center'
+            width: 'clamp(96px, 32vw, 200px)',
+            aspectRatio: '3/4'
           }}
         >
           <img 
             src="/images/hero/bridal-3.webp" 
             alt="Bridal look — modern matte"
-            className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+            className="w-full h-full object-cover"
+            width="200"
+            height="267"
             loading="lazy"
-            onLoad={(e) => {
-              e.currentTarget.parentElement?.classList.remove('is-loading');
-              e.currentTarget.parentElement?.classList.add('is-loaded');
-            }}
+            decoding="async"
           />
         </div>
 
-        {/* Bottom Right */}
+        {/* Bottom Right - Hidden on mobile */}
         <div 
-          className="hero-img absolute bottom-20 right-6 md:right-16 w-24 h-32 md:w-32 md:h-40 rounded-xl shadow-lg border border-white/20 overflow-hidden is-loading"
+          className="hero-img hidden md:block absolute bottom-16 right-8 md:right-12 lg:right-16 overflow-hidden is-loading hero-img--desktop-only"
           data-aos="fade-left" 
-          data-aos-delay="560"
+          data-aos-delay="580"
           style={{
-            backgroundImage: 'url(/images/hero/bridal-4.webp)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center'
+            width: 'clamp(120px, 22vw, 200px)',
+            aspectRatio: '3/4'
           }}
         >
           <img 
             src="/images/hero/bridal-4.webp" 
             alt="Bridal look — traditional saree drape"
-            className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+            className="w-full h-full object-cover"
+            width="200"
+            height="267"
             loading="lazy"
-            onLoad={(e) => {
-              e.currentTarget.parentElement?.classList.remove('is-loading');
-              e.currentTarget.parentElement?.classList.add('is-loaded');
-            }}
+            decoding="async"
           />
         </div>
       </div>
@@ -168,7 +159,7 @@ const HeroSection = () => {
           <h1 
             className="text-5xl md:text-7xl lg:text-8xl font-playfair font-light mb-8 text-gradient leading-tight"
             data-aos="fade-up" 
-            data-aos-delay="120"
+            data-aos-delay="140"
           >
             Redefining Bridal Beauty
           </h1>
@@ -176,7 +167,7 @@ const HeroSection = () => {
           <p 
             className="text-lg md:text-xl lg:text-2xl text-foreground/90 font-light tracking-wide mb-10 font-inter max-w-3xl mx-auto leading-relaxed"
             data-aos="fade-up" 
-            data-aos-delay="180"
+            data-aos-delay="220"
           >
             with Elegance & Glow
           </p>
@@ -192,7 +183,7 @@ const HeroSection = () => {
           <div 
             className="flex flex-col md:flex-row gap-4 md:gap-6 justify-center items-center"
             data-aos="fade-up" 
-            data-aos-delay="260"
+            data-aos-delay="300"
           >
             <Button 
               onClick={scrollToBooking}
