@@ -58,7 +58,7 @@ const HeroSection = () => {
           }}
         >
           <img 
-            src="/images/hero/bridal-1.webp" 
+            src="https://i.postimg.cc/RVmWzBND/image.png" 
             alt="Bridal look — classic elegance"
             className="w-full h-full object-cover"
             width="140"
@@ -80,7 +80,7 @@ const HeroSection = () => {
           }}
         >
           <img 
-            src="/images/hero/bridal-2.webp" 
+            src="https://i.postimg.cc/HsWT2sJd/image.png" 
             alt="Bridal look — dewy glow"
             className="w-full h-full object-cover"
             width="200"
@@ -101,7 +101,7 @@ const HeroSection = () => {
           }}
         >
           <img 
-            src="/images/hero/bridal-3.webp" 
+            src="https://i.postimg.cc/TPMStCkg/image.png" 
             alt="Bridal look — modern matte"
             className="w-full h-full object-cover"
             width="200"
@@ -122,7 +122,7 @@ const HeroSection = () => {
           }}
         >
           <img 
-            src="/images/hero/bridal-4.webp" 
+            src="https://i.postimg.cc/TYK4GZFn/image.png" 
             alt="Bridal look — traditional saree drape"
             className="w-full h-full object-cover"
             width="200"
