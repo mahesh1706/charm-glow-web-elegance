@@ -22,19 +22,19 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 glass-strong backdrop-blur-2xl border-b border-white/20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="fixed top-0 left-0 right-0 z-50 glass-strong backdrop-blur-2xl border-b border-white/20 w-full">
+      <div className="max-w-7xl mx-auto safe-area-padding">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div 
             className="flex items-center space-x-2 cursor-pointer group"
             onClick={() => scrollToSection('hero')}
           >
-            <div className="flex items-center justify-center w-14 h-14 glass rounded-full group-hover:glow-hover transition-all duration-300 overflow-hidden p-1">
+            <div className="flex items-center justify-center w-12 sm:w-14 h-12 sm:h-14 glass rounded-full group-hover:glow-hover transition-all duration-300 overflow-hidden p-1">
               <img src={logoImage} alt="Charm Bridals Logo" className="w-full h-full object-contain" />
             </div>
             <div className="flex flex-col">
-              <h1 className="text-xl font-playfair font-semibold text-soft-brown leading-none">
+              <h1 className="text-lg sm:text-xl font-playfair font-semibold text-soft-brown leading-none text-break">
                 Charm Bridals
               </h1>
               <p className="text-xs text-soft-brown/70 font-inter">
@@ -44,7 +44,7 @@ const Navigation = () => {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-4 lg:space-x-8">
             {menuItems.map((item) => (
               <button
                 key={item.name}
@@ -61,7 +61,7 @@ const Navigation = () => {
           <div className="hidden md:block">
             <Button
               onClick={() => scrollToSection('booking')}
-              className="glass-strong border border-jewel-blue/30 text-jewel-blue hover:bg-jewel-blue hover:text-white px-6 py-2 font-inter glow-hover transition-all duration-300 rounded-full"
+              className="glass-strong border border-jewel-blue/30 text-jewel-blue hover:bg-jewel-blue hover:text-white px-4 lg:px-6 py-2 text-sm lg:text-base font-inter glow-hover transition-all duration-300 rounded-full whitespace-nowrap"
             >
               Book Now
             </Button>
@@ -82,8 +82,8 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden absolute top-16 left-0 right-0 glass-strong backdrop-blur-2xl border-b border-white/20 fade-in">
-            <div className="px-4 py-6 space-y-4">
+          <div className="md:hidden absolute top-16 left-0 right-0 glass-strong backdrop-blur-2xl border-b border-white/20 fade-in w-full">
+            <div className="safe-area-padding py-6 space-y-4">
               {menuItems.map((item) => (
                 <button
                   key={item.name}

@@ -133,11 +133,11 @@ const HeroSection = () => {
         </div>
       </div>
       
-      {/* Floating Glass Elements */}
-      <div className="absolute top-20 left-20 w-32 h-32 glass rounded-full float-animation opacity-30"></div>
-      <div className="absolute top-40 right-32 w-24 h-24 glass-strong rounded-lg rotate-45 float-animation opacity-40" style={{ animationDelay: '1s' }}></div>
-      <div className="absolute bottom-32 left-1/4 w-20 h-20 glass rounded-full float-animation opacity-35" style={{ animationDelay: '2s' }}></div>
-      <div className="absolute bottom-40 right-20 w-28 h-28 glass-strong rounded-full float-animation opacity-30" style={{ animationDelay: '0.5s' }}></div>
+      {/* Floating Glass Elements - Hidden on mobile to prevent overflow */}
+      <div className="hidden md:block absolute top-20 left-20 w-32 h-32 glass rounded-full float-animation opacity-30"></div>
+      <div className="hidden md:block absolute top-40 right-32 w-24 h-24 glass-strong rounded-lg rotate-45 float-animation opacity-40" style={{ animationDelay: '1s' }}></div>
+      <div className="hidden lg:block absolute bottom-32 left-1/4 w-20 h-20 glass rounded-full float-animation opacity-35" style={{ animationDelay: '2s' }}></div>
+      <div className="hidden md:block absolute bottom-40 right-20 w-28 h-28 glass-strong rounded-full float-animation opacity-30" style={{ animationDelay: '0.5s' }}></div>
 
       {/* Sparkle Effects */}
       <div className="absolute top-1/4 left-1/3">
@@ -148,8 +148,8 @@ const HeroSection = () => {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
-        <div className="glass-strong rounded-3xl p-8 md:p-16 backdrop-blur-3xl border border-white/30 shadow-2xl">
+      <div className="relative z-10 text-center page-container max-w-5xl mx-auto">
+        <div className="glass-strong rounded-3xl p-6 md:p-16 backdrop-blur-3xl border border-white/30 shadow-2xl w-full max-w-[min(960px,100%)]">
           <div data-aos="fade-down" data-aos-delay="60">
             <span className="inline-block px-4 py-2 rounded-full bg-jewel-blue/10 text-jewel-blue text-sm font-medium mb-6">
               Charm Bridals
@@ -157,7 +157,7 @@ const HeroSection = () => {
           </div>
           
           <h1 
-            className="text-5xl md:text-7xl lg:text-8xl font-playfair font-light mb-8 text-gradient leading-tight"
+            className="fluid-text-hero font-playfair font-light mb-6 md:mb-8 text-gradient leading-tight"
             data-aos="fade-up" 
             data-aos-delay="140"
           >
@@ -165,7 +165,7 @@ const HeroSection = () => {
           </h1>
           
           <p 
-            className="text-lg md:text-xl lg:text-2xl text-foreground/90 font-light tracking-wide mb-10 font-inter max-w-3xl mx-auto leading-relaxed"
+            className="fluid-text-medium text-foreground/90 font-light tracking-wide mb-8 md:mb-10 font-inter max-w-3xl mx-auto leading-relaxed"
             data-aos="fade-up" 
             data-aos-delay="220"
           >
@@ -181,13 +181,13 @@ const HeroSection = () => {
 
           {/* CTA Group */}
           <div 
-            className="flex flex-col md:flex-row gap-4 md:gap-6 justify-center items-center"
+            className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center w-full"
             data-aos="fade-up" 
             data-aos-delay="300"
           >
             <Button 
               onClick={scrollToBooking}
-              className="glass-strong border-2 border-jewel-blue/40 text-jewel-blue hover:bg-jewel-blue hover:text-white px-10 py-5 text-lg md:text-xl font-inter glow-hover transition-all duration-300 backdrop-blur-xl rounded-full shadow-lg hover:shadow-2xl"
+              className="glass-strong border-2 border-jewel-blue/40 text-jewel-blue hover:bg-jewel-blue hover:text-white px-6 sm:px-10 py-4 sm:py-5 text-base sm:text-lg md:text-xl font-inter glow-hover transition-all duration-300 backdrop-blur-xl rounded-full shadow-lg hover:shadow-2xl w-full sm:w-auto max-w-xs"
             >
               Book Your Session
             </Button>
@@ -195,7 +195,7 @@ const HeroSection = () => {
             <Button 
               onClick={openInstagram}
               variant="secondary"
-              className="glass border-2 border-white/20 text-foreground hover:bg-white/10 px-8 py-5 text-lg md:text-xl font-inter transition-all duration-300 backdrop-blur-xl rounded-full shadow-lg hover:shadow-2xl"
+              className="glass border-2 border-white/20 text-foreground hover:bg-white/10 px-6 sm:px-8 py-4 sm:py-5 text-base sm:text-lg md:text-xl font-inter transition-all duration-300 backdrop-blur-xl rounded-full shadow-lg hover:shadow-2xl w-full sm:w-auto max-w-xs"
               aria-label="Open Instagram in a new tab"
             >
               <Instagram className="w-5 h-5 mr-2" />
