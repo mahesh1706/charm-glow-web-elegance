@@ -1,4 +1,4 @@
-import { Instagram, MessageCircle, Mail, Phone, MapPin, Heart } from 'lucide-react';
+import { Instagram, MessageCircle, Mail, Phone, MapPin, Heart, Award } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Footer = () => {
@@ -18,20 +18,21 @@ const Footer = () => {
 
   const services = [
     "Bridal Makeup",
-    "Hair Styling", 
+    "Hair Styling",
     "Saree Draping",
     "Lash Extensions",
     "Makeup Classes",
     "Group Bookings"
   ];
 
+  const builderName = 'Assuvar';
+  const builderUrl  = 'https://assuvar.com';
+
   return (
     <footer
       id="footer"
-      /* Solid light surface = instant readability */
       className="relative bg-[hsl(var(--ivory))] text-[hsl(24_14%_12%)] border-t border-[rgba(0,0,0,0.06)]"
     >
-      {/* Remove old gradient & floating shapes; keep layout clean */}
       <div className="container mx-auto px-6 py-16 relative z-10">
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-12">
           {/* Brand */}
@@ -48,10 +49,13 @@ const Footer = () => {
                 <Phone className="w-5 h-5 text-[hsl(var(--primary))]" />
                 <span className="font-inter">+91 98942 34282</span>
               </div>
-              
+              <div className="flex items-center gap-3">
+                <Mail className="w-5 h-5 text-[hsl(var(--primary))]" />
+                <span className="font-inter">info@charmbridals.com</span>
+              </div>
               <div className="flex items-center gap-3">
                 <MapPin className="w-5 h-5 text-[hsl(var(--primary))]" />
-                <span className="font-inter">559/27-A, Hosur - Krishnagiri Rd, behind VS Agency, Maruthi Nagar, Hosur, Tamil Nadu 635109</span>
+                <span className="font-inter">Mumbai, India</span>
               </div>
             </div>
           </div>
@@ -87,7 +91,7 @@ const Footer = () => {
           <div data-aos="fade-up" data-aos-delay="240">
             <h4 className="text-xl font-playfair font-semibold mb-6 text-[hsl(24_20%_18%)]">Connect With Us</h4>
 
-            {/* Social pills (high contrast) */}
+            {/* Social pills */}
             <div className="flex gap-4 mb-8">
               {socialLinks.map((s) => (
                 <a
@@ -103,13 +107,13 @@ const Footer = () => {
               ))}
             </div>
 
-            {/* IG handle card (subtle surface) */}
+            {/* IG handle card */}
             <div className="rounded-2xl p-4 mb-6 bg-white/80 border border-[rgba(0,0,0,0.06)]">
               <p className="font-inter text-sm text-[hsl(24_10%_30%)] mb-1">Follow our journey:</p>
               <p className="font-semibold font-inter text-[hsl(var(--primary))]">@divyaprakash__mua</p>
             </div>
 
-            {/* Primary CTA — filled, readable; hover lightens bg + dark text */}
+            {/* Primary CTA */}
             <Button
               onClick={() => window.open('https://wa.me/+919894234282', '_blank')}
               aria-label="Book your bridal transformation on WhatsApp"
@@ -124,13 +128,33 @@ const Footer = () => {
         <div className="border-t border-[rgba(0,0,0,0.06)] mt-12 pt-8" data-aos="fade-up">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-[hsl(24_10%_30%)]">
             <p className="font-inter text-sm">
-              © 2024 Charm Bridals. All rights reserved. Crafted with elegance.
+              © 2025 Charm Bridals. All rights reserved. Crafted with elegance.
             </p>
             <div className="flex items-center gap-2 font-inter text-sm">
               <span>Made with</span>
               <Heart className="w-4 h-4 text-red-500 fill-current" />
               <span>for beautiful brides</span>
             </div>
+          </div>
+
+          {/* Creator badge */}
+          <div className="mt-6 flex justify-center">
+            <a
+              href={builderUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Visit ${builderName}`}
+              className="group inline-flex items-center gap-2 rounded-full px-5 py-2 text-sm font-semibold 
+                         bg-[hsl(var(--primary))] text-white shadow-md
+                         hover:bg-[hsl(22_32%_44%)] hover:text-[hsl(24_14%_12%)]
+                         focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2
+                         focus-visible:outline-[color-mix(in_srgb,hsl(var(--primary)),white_35%)] transition-colors"
+            >
+              <Award className="w-4 h-4" />
+              <span className="whitespace-nowrap">
+                Built by <span className="font-bold">{builderName}</span> — <span className="underline underline-offset-2">assuvar.com</span>
+              </span>
+            </a>
           </div>
         </div>
       </div>
