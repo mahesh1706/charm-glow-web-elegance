@@ -80,7 +80,7 @@ const HeroSection = () => {
           }}
         >
           <img 
-            src="https://i.postimg.cc/HsWT2sJd/image.png" 
+            src="https://i.postimg.cc/BnGkgm7D/image.png" 
             alt="Bridal look — dewy glow"
             className="w-full h-full object-cover"
             width="200"
@@ -101,7 +101,7 @@ const HeroSection = () => {
           }}
         >
           <img 
-            src="https://i.postimg.cc/TPMStCkg/image.png" 
+            src="https://i.postimg.cc/V6HWVNYp/image.png" 
             alt="Bridal look — modern matte"
             className="w-full h-full object-cover"
             width="200"
