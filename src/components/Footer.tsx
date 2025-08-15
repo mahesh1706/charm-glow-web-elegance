@@ -49,13 +49,10 @@ const Footer = () => {
                 <Phone className="w-5 h-5 text-[hsl(var(--primary))]" />
                 <span className="font-inter">+91 98942 34282</span>
               </div>
-              <div className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-[hsl(var(--primary))]" />
-                <span className="font-inter">info@charmbridals.com</span>
-              </div>
+            
               <div className="flex items-center gap-3">
                 <MapPin className="w-5 h-5 text-[hsl(var(--primary))]" />
-                <span className="font-inter">Mumbai, India</span>
+                <span className="font-inter">559/27-A, Hosur - Krishnagiri Rd, behind VS Agency, Maruthi Nagar, Hosur, Tamil Nadu 635109</span>
               </div>
             </div>
           </div>
