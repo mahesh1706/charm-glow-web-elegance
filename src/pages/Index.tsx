@@ -6,6 +6,7 @@ import 'aos/dist/aos.css';
 import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
 import BookingSection from '@/components/BookingSection';
+import ServicesExplorer from '@/components/ServicesExplorer';
 import PackagesSection from '@/components/PackagesSection';
 import GallerySection from '@/components/GallerySection';
 import ReviewsSection from '@/components/ReviewsSection';
@@ -27,6 +28,7 @@ const Index = () => {
       <Navigation />
       <HeroSection />
       <BookingSection />
+      <ServicesExplorer />
       <PackagesSection />
       <GallerySection />
       <ReviewsSection />

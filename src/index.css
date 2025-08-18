@@ -187,6 +187,16 @@
   .fluid-text-medium {
     font-size: clamp(16px, 3vw, 24px);
   }
+
+  /* Hide scrollbars for horizontal category scroll */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 /* Animations / utilities */
